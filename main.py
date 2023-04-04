@@ -25,8 +25,9 @@ def main():
     # Create parameter sliders:
     # Create sliders for each parameter
     param_values = []
-    for param in params:
-        param_value = st.sidebar.slider(label=str(param), min_value=-10.0, max_value=10.0, value=1., step=0.01)
+    init_param = [4, 3, 2, 1]
+    for i, param in enumerate(params):
+        param_value = st.sidebar.slider(label=str(param), min_value=-10.0, max_value=10.0, value=init_param[i], step=0.01)
         param_values.append(param_value)
     # Store the current slider values in session state
     st.session_state.param_values = param_values
