@@ -10,8 +10,8 @@ Suppose we have a system
 $$x'(t) = f(x(t), y(t))$$
 $$y'(t) = g(x(t), y(t))$$
 and let $x^\*, y^\*$ be a fixed point of this system i.e. 
-$$f(x^*, y^*) = 0 \text{ and } g(x^*, y^*) = 0.$$
-Perturb the equation by these, and look at the system in $u = x-x^*$ and $v=y-y^*$. Then the system $[x,y]^T$ with dynamics $F=[f, g]^T$ has linearization $w=[u,v]$ with dynamics $G = J_F(z^*) [u,v]^T$ where $J_F(z)$ is the Jacobian matrix of $F$ evaluated at $z=[x,y]$.
+$$f(x^\*, y^\*) = 0 \text{ and } g(x^\*, y^\*) = 0.$$
+Perturb the equation by these, and look at the system in $u = x-x^\*$ and $v=y-y^\*$. Then the system $[x,y]^T$ with dynamics $F=[f, g]^T$ has linearization $w=[u,v]$ with dynamics $G = J_F(z^*) [u,v]^T$ where $J_F(z)$ is the Jacobian matrix of $F$ evaluated at $z=[x,y]$.
 
 The important part is that *as long as the fixed point for the linearized system is not one of the borderline cases below*, this lineariation scheme can classify the dynamical system's stability.
 
