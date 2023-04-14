@@ -20,7 +20,7 @@ def ode_analysis(rect,x0,tn):
 def main():
     st.title("Linear stability analysis of ODEs")
     input_str = st.sidebar.text_input("Input variables (comma-separated)", value="x,y")
-    param_str = st.sidebar.text_input("Parameters (comma-separated)", value="a,b")
+    param_str = st.sidebar.text_input("Parameters (comma-separated)", value="a,b,c,d,e,f,g")
     dyn_str = st.sidebar.text_input("Dynamics (comma-separated)", value="y, a*y-b*x")
     initial_str = st.sidebar.text_input("Initial (comma-separated)", value="0,1")
     tn = st.sidebar.slider("Time-horizon", min_value=0.01, max_value=1000., value=100., step=0.01)
