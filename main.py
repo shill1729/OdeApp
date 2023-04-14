@@ -30,7 +30,7 @@ def main():
     # Create parameter sliders:
     # Create sliders for each parameter
     param_values = []
-    init_param = [0.15, 0.25]
+    init_param = [0.15, 0.25, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     for i, param in enumerate(params):
         param_value = st.sidebar.slider(label=str(param), min_value=-10.0, max_value=10.0, value=init_param[i], step=0.01)
         param_values.append(param_value)
