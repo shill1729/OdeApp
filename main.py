@@ -20,7 +20,7 @@ def ode_analysis(rect,x0,tn):
 def main():
     st.title("Linear stability analysis of ODEs")
     input_str = st.sidebar.text_input("Input variables (comma-separated)", value="x,y")
-    param_str = st.sidebar.text_input("Parameters (comma-separated)", value="a,b,c,d,e,f,g")
+    param_str = st.sidebar.text_input("Parameters (comma-separated)", value="a,b")
     dyn_str = st.sidebar.text_input("Dynamics (comma-separated)", value="y, a*y-b*x")
     initial_str = st.sidebar.text_input("Initial (comma-separated)", value="0,1")
     tn = st.sidebar.slider("Time-horizon", min_value=0.01, max_value=1000., value=100., step=0.01)
@@ -30,7 +30,7 @@ def main():
     # Create parameter sliders:
     # Create sliders for each parameter
     param_values = []
-    init_param = [0.15, 0.25, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    init_param = np.ones(len(params))
     for i, param in enumerate(params):
         param_value = st.sidebar.slider(label=str(param), min_value=-10.0, max_value=10.0, value=init_param[i], step=0.01)
         param_values.append(param_value)
